@@ -6,12 +6,9 @@ I plan use these tech stack
 - SpringBoot
 - gRPC
 - GraphQL
-- Data store:
-+ PostgreSQL
-- Caching:
-+ Redis, Mem cache
-- Event Driven:
-+ Kafka
+- Data store: postgreSQL
+- Caching: Redis, Mem cache
+- Event Driven: Kafka
 
 # if this note have anything wrong or not truly 100%, 
 # please forgive my lack of knowledge ~,~
