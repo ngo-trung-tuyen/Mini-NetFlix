@@ -31,4 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
-
+/backend-common/src/main/java/com/mininetflix/backend/common/proto/*
+/video-catalog-service/src/main/java/com/mininetflix/video/catalog/service/proto/*

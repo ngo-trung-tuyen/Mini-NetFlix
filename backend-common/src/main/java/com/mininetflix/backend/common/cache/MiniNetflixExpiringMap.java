@@ -1,6 +1,7 @@
 package com.mininetflix.backend.common.cache;
 
-import com.mininetflix.backend.common.MiniNetflixCommonUtils;
+import com.mininetflix.backend.common.utils.MiniNetflixCommonUtils;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
@@ -11,6 +12,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
+@Component
 public class MiniNetflixExpiringMap<K, V> {
     private final ScheduledExecutorService scheduledExecutorService;
     private final Map<K, ScheduledFuture<V>> removingScheduleMap;

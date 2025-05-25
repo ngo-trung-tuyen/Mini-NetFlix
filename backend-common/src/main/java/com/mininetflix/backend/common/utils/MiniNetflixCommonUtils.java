@@ -1,4 +1,4 @@
-package com.mininetflix.backend.common;
+package com.mininetflix.backend.common.utils;
 
 import java.util.Collection;
 import java.util.List;

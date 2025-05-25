@@ -27,11 +27,6 @@
             <artifactId>postgresql</artifactId>
             <version>42.7.5</version>
         </dependency>
-        <dependency>
-            <groupId>net.devh</groupId>
-            <artifactId>grpc-spring-boot-starter</artifactId>
-            <version>2.15.0.RELEASE</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -61,9 +56,16 @@
                 <artifactId>protobuf-maven-plugin</artifactId>
                 <version>0.6.1</version>
                 <configuration>
+                    <pluginId>grpc-java</pluginId>
+                    <!-- remove comment in the line below to gen proto source -->
+<!--                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.69.0:exe:${os.detected.classifier}</pluginArtifact>-->
                     <protocArtifact>com.google.protobuf:protoc:3.21.12:exe:${os.detected.classifier}</protocArtifact>
                     <protoSourceRoot>${project.basedir}/src/proto/</protoSourceRoot>
-                    <additionalProtoPathElements>${project.parent.basedir}/backend-common/src/proto/</additionalProtoPathElements>
+                    <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
+                    <clearOutputDirectory>false</clearOutputDirectory>
+                    <additionalProtoPathElements>
+                        <additionalProtoPathElement>${project.parent.basedir}/backend-common/src/proto</additionalProtoPathElement>
+                    </additionalProtoPathElements>
                 </configuration>
                 <executions>
                     <execution>
@@ -71,10 +73,6 @@
                             <goal>compile</goal>
                             <goal>compile-custom</goal>
                         </goals>
-                        <configuration>
-                            <pluginId>grpc-java</pluginId>
-                            <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.52.1:exe:${os.detected.classifier}</pluginArtifact>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
