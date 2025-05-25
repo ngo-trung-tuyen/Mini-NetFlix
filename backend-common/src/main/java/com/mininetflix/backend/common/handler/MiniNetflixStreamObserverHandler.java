@@ -1,4 +1,4 @@
-package com.mininetflix.backend.common;
+package com.mininetflix.backend.common.handler;
 
 import io.grpc.stub.StreamObserver;
 

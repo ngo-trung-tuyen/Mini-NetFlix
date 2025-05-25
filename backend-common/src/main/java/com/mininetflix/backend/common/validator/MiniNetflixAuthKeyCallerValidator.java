@@ -1,4 +1,6 @@
-package com.mininetflix.backend.common;
+package com.mininetflix.backend.common.validator;
+
+import com.mininetflix.backend.common.utils.MiniNetflixCommonUtils;
 
 public class MiniNetflixAuthKeyCallerValidator {
     public static boolean validateAuthKey(String authKey) {
