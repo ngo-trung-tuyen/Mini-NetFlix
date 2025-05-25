@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### source gen
+/backend-common/src/proto/*
+/video-catalog-service/src/proto/*

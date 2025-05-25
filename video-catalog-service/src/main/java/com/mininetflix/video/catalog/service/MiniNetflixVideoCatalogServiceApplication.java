@@ -1,4 +1,4 @@
-package com.minineflix.video.catalog.service;
+package com.mininetflix.video.catalog.service;
 
 public class MiniNetflixVideoCatalogServiceApplication {
     public static void main(String[] args) {
