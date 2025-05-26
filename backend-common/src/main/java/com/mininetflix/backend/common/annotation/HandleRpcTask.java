@@ -10,5 +10,5 @@ import java.lang.annotation.RetentionPolicy;
 @Documented
 @Component
 public @interface HandleRpcTask {
-    String taskName();
+    String rpcMethod();
 }

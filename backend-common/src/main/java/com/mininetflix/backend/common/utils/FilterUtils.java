@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class FilterUtils {
     public static String getOrDefault(String src, String def) {
-        return MiniNetflixCommonUtils.isNullOrEmpty(src) ? def : src;
+        return CommonUtils.isNullOrEmpty(src) ? def : src;
     }
 
     public static Object getOrDefault(Object src, Object def) {

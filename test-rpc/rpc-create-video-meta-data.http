@@ -1,0 +1,20 @@
+GRPC localhost:12345/com/mininetflix/video/catalog/service/proto/MiniNetflixVideoCatalogServiceGrpc/createVideoMetadata
+Content-Type: application/json
+
+{
+  "authKey": "dolor",
+  "videoMetadata": {
+    "author": "tuyenngo",
+    "createdTime": "171212121212",
+    "description": "mock",
+    "genre": "video",
+    "publisher": "tuyenngo",
+    "showingFromTime": "187654321",
+    "showingToTime": "201233456",
+    "status": 1,
+    "thumbnailUrl": "haha",
+    "title": "officia",
+    "updatedTime": "123454321",
+    "url": "haha"
+  }
+}

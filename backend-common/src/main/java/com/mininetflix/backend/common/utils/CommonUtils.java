@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class MiniNetflixCommonUtils {
+public class CommonUtils {
     public static <T> boolean isNullOrEmpty(Collection<T> source) {
         return source == null || source.isEmpty();
     }
