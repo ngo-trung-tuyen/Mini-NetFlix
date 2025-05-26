@@ -1,7 +1,6 @@
 package com.mininetflix.backend.common.cache;
 
-import com.mininetflix.backend.common.utils.MiniNetflixCommonUtils;
-import org.springframework.stereotype.Component;
+import com.mininetflix.backend.common.utils.CommonUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -12,13 +11,12 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-@Component
-public class MiniNetflixExpiringMap<K, V> {
+public class ExpiringMap<K, V> {
     private final ScheduledExecutorService scheduledExecutorService;
     private final Map<K, ScheduledFuture<V>> removingScheduleMap;
     private final Map<K, V> expiringMap;
 
-    public MiniNetflixExpiringMap() {
+    public ExpiringMap() {
         this.scheduledExecutorService = Executors.newScheduledThreadPool(Runtime.getRuntime().availableProcessors());
         this.removingScheduleMap = new ConcurrentHashMap<>();
         this.expiringMap = new ConcurrentHashMap<>();
@@ -56,7 +54,7 @@ public class MiniNetflixExpiringMap<K, V> {
     }
 
     public List<V> multiGet(List<K> keys) {
-        return MiniNetflixCommonUtils.getKeyList(keys, this::get);
+        return CommonUtils.getKeyList(keys, this::get);
     }
 
     public void shutdown() {

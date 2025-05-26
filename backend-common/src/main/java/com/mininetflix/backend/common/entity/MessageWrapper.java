@@ -1,5 +1,5 @@
 package com.mininetflix.backend.common.entity;
 
-public abstract class MiniNetflixMessage {
+public interface MessageWrapper {
     // self handle
 }
