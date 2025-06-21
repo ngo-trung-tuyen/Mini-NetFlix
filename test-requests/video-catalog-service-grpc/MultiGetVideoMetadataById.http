@@ -1,0 +1,7 @@
+GRPC localhost:12345/MiniNetflixVideoCatalogService/multiGetVideoMetadataById
+Content-Type: application/json
+
+{
+  "authKey": "mock",
+  "value": ["198e9f00-d87e-4863-b7b7-9675dca9f83d", "5d4200d6-c5e5-4463-a07c-dbacb9fddcf8"]
+}

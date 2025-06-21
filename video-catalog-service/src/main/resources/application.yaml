@@ -1,6 +1,7 @@
 grpc:
   server:
     port: 12345
+    reflection-service-enabled: true
 
 server:
   port: 8080
@@ -8,23 +9,20 @@ server:
 spring:
   application:
     name: video-catalog-service
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
   datasource:
-    url: jdbc:h2:mem:mini_netflix
-    driver-class-name: org.h2.Driver
-    username: sa
-    password:
+    url: jdbc:postgresql://localhost:5432/mini_netflix
+    driver-class-name: org.postgresql.Driver
+    username: tuyenngo
+    password: 1234567
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
   sql:
     init:
-      mode: always
+      mode: never
 
 logging:
   level:
     root: info
+    net.devh.boot.grpc.server: debug

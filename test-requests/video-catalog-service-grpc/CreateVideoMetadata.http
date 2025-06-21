@@ -1,0 +1,20 @@
+GRPC localhost:12345/MiniNetflixVideoCatalogService/createVideoMetadata
+Content-Type: application/json
+
+{
+  "authKey": "dolor",
+  "videoMetadata": {
+    "author": "tuyenngo",
+    "createdTime": "171212121212",
+    "description": "#阿YueYue #冬眠 #nhạctrungquốc #ying_yie #冬眠-2023 #阿YueYue #anguyetnguyet #刘兆宇 #nhactrungquochaynhat #nhactrunghay2023 #nhactrungmoinhat #nhạctrungquốcthịnhhành #nhạctrungquốc #douyin",
+    "genre": "video",
+    "publisher": "tuyenngo",
+    "showingFromTime": "187654321",
+    "showingToTime": "201233456",
+    "status": 1,
+    "thumbnailUrl": "haha",
+    "title": "[Vietsub] Đông Miên - 2023 - A Nguyệt Nguyệt, Lưu Triệu Vũ / 冬眠 - 2023 - 阿YueYue, 刘兆宇",
+    "updatedTime": "123454321",
+    "url": "https://www.youtube.com/watch?v=4_3JgJef0es"
+  }
+}
