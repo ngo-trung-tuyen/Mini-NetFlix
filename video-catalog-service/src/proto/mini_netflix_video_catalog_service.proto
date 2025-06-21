@@ -38,7 +38,7 @@ message GrpcCreateVideoMetadataRequest {
   GrpcVideoMetadata videoMetadata = 2;
 }
 
-service MiniNetflixVideoCatalogServiceGrpc {
+service MiniNetflixVideoCatalogService {
   rpc createVideoMetadata(GrpcCreateVideoMetadataRequest) returns (GrpcStringResponse) {}
   rpc getVideoMetadataById(GrpcStringRequest) returns (GrpcVideoMetadataResponse) {}
   rpc multiGetVideoMetadataById(GrpcMultiStringRequest) returns (GrpcMultiVideoMetadataResponse) {}

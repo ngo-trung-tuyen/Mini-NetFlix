@@ -9,8 +9,6 @@ public abstract class MiniNetflixTask {
         this.taskName = taskName;
     }
 
-    protected MiniNetflixTask() {}
-
     protected abstract void exec(DataWrapper dataWrapper);
 
     public void run(DataWrapper dataWrapper) {

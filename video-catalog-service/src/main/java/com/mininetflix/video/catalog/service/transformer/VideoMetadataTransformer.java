@@ -1,6 +1,7 @@
 package com.mininetflix.video.catalog.service.transformer;
 
 import com.mininetflix.backend.common.transformer.AbstractProtobufTransformer;
+import com.mininetflix.backend.common.utils.CommonUtils;
 import com.mininetflix.backend.common.utils.FilterUtils;
 import com.mininetflix.video.catalog.service.entity.VideoMetadata;
 import com.mininetflix.video.catalog.service.proto.GrpcVideoMetadata;
@@ -15,8 +16,11 @@ public class VideoMetadataTransformer extends AbstractProtobufTransformer<GrpcVi
     @Override
     public VideoMetadata fromGrpcToObject(GrpcVideoMetadata message) {
         try {
+            UUID videoId = CommonUtils.isNullOrEmpty(message.getVideoId())
+                ? UUID.randomUUID()
+                : UUID.fromString(message.getVideoId());
             return new VideoMetadata()
-                .setVideoId(UUID.fromString(message.getVideoId()))
+                .setVideoId(videoId)
                 .setTitle(message.getTitle())
                 .setDescription(message.getDescription())
                 .setAuthor(message.getAuthor())
@@ -30,7 +34,7 @@ public class VideoMetadataTransformer extends AbstractProtobufTransformer<GrpcVi
                 .setShowingFromTime(message.getShowingFromTime())
                 .setShowingToTime(message.getShowingToTime());
         } catch (Exception ex) {
-            log.error(">> fromGrpcToObject error {}", ex.getMessage(), ex);
+            log.error("fromGrpcToObject error {}", ex.getMessage(), ex);
             return null;
         }
     }

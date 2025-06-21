@@ -1,8 +1,6 @@
 package com.mininetflix.video.catalog.service.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -16,7 +14,6 @@ import java.util.UUID;
 @Table(name = "video_metadata")
 public class VideoMetadata {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID videoId;
     private String title;
     private String description;

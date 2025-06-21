@@ -7,7 +7,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class DataWrapper {
     private int status;
-    private String statusMsg;
+    private String statusMsg = "";
     private MessageWrapper msgWrapper;
 
     public <T extends MessageWrapper> T getMsgWrapper(Class<T> clazz) {
